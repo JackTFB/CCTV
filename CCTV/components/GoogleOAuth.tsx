@@ -1,12 +1,9 @@
 import React, {useCallback, useEffect, useState} from "react";
-import {Image, Button, Text, View, StyleSheet, Platform, TouchableOpacity, FlatList, Alert, TextInput, Modal, Dimensions } from "react-native";
+import {Image, Text, View, StyleSheet, Platform, TouchableOpacity, FlatList, Alert, TextInput, Modal, Dimensions } from "react-native";
 import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
 import {
-    GoogleSignin,
-    GoogleSigninButton,
-    isErrorWithCode,
-    statusCodes
+    GoogleSignin
 } from "@react-native-google-signin/google-signin";
 
 import { fetchYouTubeVideos, searchForChannels, YouTubeVideo, YouTubeChannel } from "../services/youtubeService";
