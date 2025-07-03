@@ -27,7 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>cctv</string>
+          <string>https</string>
           <string>com.jacktfb.cctv</string>
         </array>
       </dict>
