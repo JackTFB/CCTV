@@ -7,7 +7,7 @@ import MobileNavbar from "../components/mobile/MobileNavbar";
 import WebHome from "..//components/web/WebHome";
 import WebFeed from "..//components/web/WebFeed";
 import WebVOD from "..//components/web/WebVOD";
-import WebSettings from "..//components/web/WebSettings";
+import {WebSettings} from "..//components/web/WebSettings";
 import WebProfile from "..//components/web/WebProfile";
 
 import MobileHome from "../components/mobile/MobileHome";

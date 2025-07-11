@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity, FlatList, StyleSheet} from 'react-native';
+import {View, Text, Image, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 
 export default function WebVOD() {
     return(
@@ -26,19 +26,7 @@ export default function WebVOD() {
                     </TouchableOpacity>
                 </View>
                 {/* Connect Google OAuth code to the FlatList for it to render properly. :)*/}
-                <FlatList
-                    style={styles.contentList}
-                    renderItem={() => (
-                        <View style={styles.videoItem}>
-                            <Image
-                                source={require('../../assets/images/KeqingRender.png')}
-                                style={styles.thumbnail}
-                            />
-                            <Text style={styles.videoTitle}>Test Thumbnail</Text>
-                        </View>
-                    )}
-                    ListHeaderComponent={<Text style={styles.contentListHeader}>Latest Videos</Text>}
-                />
+
             </View>
 
         </View>

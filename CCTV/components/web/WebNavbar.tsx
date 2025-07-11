@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, Modal } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const menuItems = [
-    { name: 'Home', icon: '🏠'},
-    { name: 'Feed', icon: '📡'},
-    { name: 'VOD', icon: '▶'},
-    { name: 'Settings', icon: '⚙️'},
-    { name: 'Profile', icon: '👤'}
+    { name: 'Home', icon: 'home-outline' as const},
+    { name: 'Feed', icon: 'logo-rss' as const},
+    { name: 'VOD', icon: 'play-circle-outline' as const},
+    { name: 'Settings', icon: 'settings-outline' as const},
+    { name: 'Profile', icon: 'person-outline' as const}
 ];
 
 interface WebNavbarProps {
@@ -53,7 +54,10 @@ export default function WebNavbar({ activeWebPage, onWebPageChange }: WebNavbarP
                                 onPress={() => handleMenuItemPress(item.name)}
                                 style={[styles.menuItem, item.name === activeWebPage && styles.activeMenuItem]}
                                 >
-                                <Text style={styles.menuItemIcon}>{item.icon}</Text>
+                                <Ionicons name={item.icon}
+                                size={24}
+                                          color='#FFFFFF'
+                                />
                                 <Text style={styles.menuItemText}>{item.name}</Text>
                             </Pressable>
                         ))}
@@ -85,7 +89,7 @@ const styles = StyleSheet.create({
     sidebar: {
         width: 280,
         height: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: '#292929',
         shadowColor: '#000',
         shadowOffset: { width: 2, height: 0 },
         shadowOpacity: 0.25,
@@ -100,19 +104,19 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         borderBottomWidth: 1,
         borderBottomColor: '#eee',
-        backgroundColor: '#f8f8f8',
+        backgroundColor: '#292929',
     },
     sidebarTitle: {
         fontSize: 22,
         fontWeight: 'bold',
-        color: '#333',
+        color: '#FFFFFF',
     },
     closeButton: {
         padding: 5,
     },
     closeButtonText: {
         fontSize: 24,
-        color: '#555',
+        color: '#FFFFFF',
     },
     menuItem: {
         flexDirection: 'row',
@@ -133,6 +137,6 @@ const styles = StyleSheet.create({
     },
     menuItemText: {
         fontSize: 16,
-        color: '#333',
+        color: '#FFFFFF',
     },
 });

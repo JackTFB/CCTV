@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, SafeAreaView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const TABS = [
-    { name: 'Home', icon: '🏠'},
-    { name: 'Feed', icon: '📡'},
-    { name: 'VOD', icon: '▶'},
-    { name: 'Settings', icon: '⚙️'},
-    { name: 'Profile', icon: '👤'}
+    { name: 'Home', icon: 'home-outline' as const},
+    { name: 'Feed', icon: 'logo-rss' as const},
+    { name: 'VOD', icon: 'play-circle-outline' as const},
+    { name: 'Settings', icon: 'settings-outline' as const},
+    { name: 'Profile', icon: 'person-outline' as const}
 ];
 
 interface MobileNavbarProps {
@@ -31,12 +32,10 @@ export default function MobileNavbar({ activeMobilePage, onMobilePageChange }: M
                         style={styles.tab}
                         onPress={() => handleMenuItemPress(tab.name)}
                     >
-                        <Text style={[
-                            styles.tabIcon,
-                            { opacity: activeTab === tab.name ? 1 : 0.6 }
-                        ]}>
-                            {tab.icon}
-                        </Text>
+                        <Ionicons
+                        name={tab.icon}
+                        size={24}
+                        color='#FFFFFF' />
                         <Text style={
                             [styles.tabLabel,
                             { color: activeTab === tab.name ? '#007AFF' : '#8e8e93' }
@@ -64,6 +63,7 @@ const styles = StyleSheet.create({
         elevation: 8, // for Android
     },
     container: {
+        backgroundColor: '#292929',
         flexDirection: 'row',
         justifyContent: 'space-around',
         height: 60,
