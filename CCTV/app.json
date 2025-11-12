@@ -38,8 +38,9 @@
         }
       ],
       "expo-web-browser",
-      "@react-native-google-signin/google-signin"
-
+      "@react-native-google-signin/google-signin",
+      "expo-sqlite",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true

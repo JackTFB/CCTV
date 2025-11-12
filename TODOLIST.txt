@@ -1,37 +1,4 @@
-# CCTV App Implementation Roadmap
-
-## Phase 1: Project Setup and Authentication
-- [x] Create basic project structure
-- [ ] Implement OAuth authentication for YouTube, Twitch, and TikTok
-- [ ] Set up secure token storage
-- [ ] Create user preferences storage (SQLite)
-
-## Phase 2: API Integration
-- [ ] Implement YouTube API service
-- [ ] Implement Twitch API service
-- [ ] Implement TikTok API service
-- [ ] Create unified content fetching interface
-
-## Phase 3: UI Development
-- [ ] Design and implement channel selector screen
-- [ ] Create video player component
-- [ ] Implement platform-specific layouts for content viewing
-- [ ] Add navigation between screens
-
-## Phase 4: Content Feed Generation
-- [ ] Develop algorithm for content aggregation
-- [ ] Implement scheduling for 24/7 feed
-- [ ] Add user content filtering options
-- [ ] Create content caching mechanism
-
-## Phase 5: Cross-Platform Support
-- [ ] Test and optimize for iOS
-- [ ] Test and optimize for Android
-- [ ] Add web support
-- [ ] Add desktop support (if applicable)
-
-## Phase 6: Refinement and Additional Features
-- [ ] Add user profile management
-- [ ] Implement content recommendations
-- [ ] Add offline viewing capabilities
-- [ ] Optimize performance and reduce battery usage
+OAuth
+Typescript Hook Integration
+API Integration
+Organize Content Data Structures
