@@ -2,6 +2,9 @@ import { Button, View, Text, Platform, StyleSheet } from "react-native";
 import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
 import React, {useEffect, useState} from "react";
+// @ts-ignore
+// eslint-disable-next-line import/no-unresolved
+import { TWITCH_CLIENT_ID, TWITCH_CLIENT_SECRET } from '@env'
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -11,19 +14,16 @@ const discovery = {
     revocationEndpoint: 'https://id.twitch.tv/oauth2/revoke',
 };
 
-const WEB_CLIENT_ID = '0mrgt8smkus1i4c20qkbeno5iecvto';
-const WEB_CLIENT_SECRET = 'ys4xab04opil5jkh1tepjo1oaqlzk2';
-
 
 export default function TwitchOAuth() {
     const [accessToken, setAccessToken] = useState<string | null>(null);
 
     const clientId = Platform.select({
-        default: WEB_CLIENT_ID
+        default: TWITCH_CLIENT_ID
     })
 
     const clientSecret = Platform.select({
-        web: WEB_CLIENT_SECRET,
+        web: TWITCH_CLIENT_SECRET,
         default: ''
     })
 
